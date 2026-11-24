@@ -1,1 +1,357 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Crush — Ask anonymously</title>
+<meta name="description" content="Have a question for someone at work? Ask anonymously with Work Crush.">
+<style>
+:root {
+  --black:#111111;
+  --white:#ffffff;
+  --grey:#777777;
+  --line:#e8e8e8;
+  --soft:#f6f6f6;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:var(--white);
+  color:var(--black);
+  font-family:Arial,Helvetica,sans-serif;
+}
+header {
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+}
+.logo {
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:-1.5px;
+}
+.logo span { font-weight:400; }
+.header-note {
+  color:var(--grey);
+  font-size:11px;
+  letter-spacing:2px;
+}
+main {
+  max-width:1050px;
+  margin:auto;
+  padding:90px 24px 75px;
+}
+.hero {
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 65px;
+}
+.eyebrow {
+  font-size:11px;
+  letter-spacing:3px;
+  color:var(--grey);
+  text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(43px,8vw,76px);
+  letter-spacing:-4px;
+  line-height:1.02;
+  margin:24px 0;
+}
+.hero p {
+  color:var(--grey);
+  font-size:17px;
+  line-height:1.7;
+}
+.content {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:start;
+}
+.intro { padding:25px 0; }
+.intro h2 {
+  font-size:30px;
+  letter-spacing:-1px;
+}
+.intro p {
+  color:var(--grey);
+  line-height:1.8;
+}
+.steps {
+  margin-top:35px;
+  display:grid;
+  gap:23px;
+}
+.step {
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+.number {
+  border:1px solid var(--line);
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  font-size:12px;
+}
+.step strong { font-size:14px; }
+.step small {
+  display:block;
+  color:var(--grey);
+  margin-top:6px;
+  line-height:1.5;
+}
+.form-card {
+  border:1px solid var(--line);
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 12px 45px rgba(0,0,0,.045);
+}
+.form-card h2 {
+  margin:0 0 8px;
+  font-size:25px;
+  letter-spacing:-1px;
+}
+.subheading {
+  color:var(--grey);
+  font-size:13px;
+  margin-bottom:28px;
+  line-height:1.6;
+}
+label {
+  display:block;
+  font-size:13px;
+  font-weight:700;
+  margin:20px 0 9px;
+}
+input,select,textarea {
+  width:100%;
+  padding:14px;
+  border:1px solid #dedede;
+  border-radius:6px;
+  background:#fff;
+  color:#111;
+  font:inherit;
+  font-size:14px;
+}
+textarea { resize:vertical; min-height:85px; }
+input:focus,select:focus,textarea:focus {
+  outline:2px solid #111;
+  outline-offset:2px;
+}
+.answer {
+  display:flex;
+  gap:9px;
+  margin:9px 0;
+}
+.answer input { flex:1; min-width:0; }
+.remove {
+  border:1px solid var(--line);
+  background:white;
+  border-radius:6px;
+  padding:0 12px;
+  cursor:pointer;
+}
+.secondary {
+  background:white;
+  border:1px solid #ddd;
+  border-radius:6px;
+  padding:11px 14px;
+  font-weight:600;
+  cursor:pointer;
+}
+.primary {
+  width:100%;
+  padding:16px;
+  margin-top:24px;
+  border:0;
+  border-radius:6px;
+  background:#111;
+  color:white;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+}
+.primary:hover { background:#333; }
+.note {
+  color:var(--grey);
+  font-size:11px;
+  line-height:1.6;
+  margin-top:16px;
+}
+.message {
+  display:none;
+  padding:15px;
+  margin-top:18px;
+  border-radius:6px;
+  background:var(--soft);
+  font-size:13px;
+  line-height:1.6;
+}
+footer {
+  border-top:1px solid var(--line);
+  padding:28px 7%;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:var(--grey);
+  font-size:11px;
+}
+@media(max-width:750px) {
+  header { padding:0 20px; }
+  main { padding-top:60px; }
+  .content { grid-template-columns:1fr; gap:20px; }
+  .hero { margin-bottom:40px; }
+  h1 { letter-spacing:-2px; }
+  .form-card { padding:22px; }
+  footer { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">work crush<span>.</span></div>
+  <div class="header-note">ANONYMOUSLY.</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">A little curiosity goes a long way</div>
+    <h1>Someone caught<br>your eye?</h1>
+    <p>Make the first move without making it obvious.<br>
+    Ask someone at work a question anonymously.</p>
+  </section>
+
+  <section class="content">
+    <div class="intro">
+      <h2>Some questions are easier to ask anonymously.</h2>
+      <p>Whether you're curious if someone is single or wondering if they'd ever date a colleague, Work Crush gives you a discreet way to ask.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="number">01</div>
+          <div><strong>Ask your question</strong><small>Choose a question or write your own.</small></div>
+        </div>
+        <div class="step">
+          <div class="number">02</div>
+          <div><strong>They receive an email</strong><small>Your identity isn't shown to the recipient.</small></div>
+        </div>
+        <div class="step">
+          <div class="number">03</div>
+          <div><strong>Get their answer</strong><small>Their response is sent privately to you.</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Send a question.</h2>
+      <div class="subheading">A little courage. A completely anonymous question.</div>
+
+      <form id="questionForm">
+        <label for="recipient">Who would you like to ask?</label>
+        <input id="recipient" type="email" placeholder="Their email address" required>
+
+        <label for="question">Choose your question</label>
+        <select id="question">
+          <option>Are you single?</option>
+          <option>Would you date someone you work with?</option>
+          <option>Would you like to get to know someone at work?</option>
+          <option>Would you be interested in going for a coffee?</option>
+          <option value="custom">Write my own question</option>
+        </select>
+
+        <div id="customArea" hidden>
+          <label for="customQuestion">Your question</label>
+          <textarea id="customQuestion" placeholder="Write your question here..."></textarea>
+        </div>
+
+        <label>Your answer options</label>
+        <div id="answers">
+          <div class="answer"><input value="Yes, I'm single"><button class="remove" type="button">×</button></div>
+          <div class="answer"><input value="No, I'm in a relationship"><button class="remove" type="button">×</button></div>
+          <div class="answer"><input value="I'm not interested"><button class="remove" type="button">×</button></div>
+        </div>
+        <button class="secondary" type="button" id="addAnswer">+ Add an answer</button>
+
+        <label for="sender">Where should we send your answer?</label>
+        <input id="sender" type="email" placeholder="Your email address" required>
+
+        <button class="primary" type="submit">Preview my question →</button>
+        <div class="message" id="message" role="status"></div>
+        <div class="note">Your email address is used privately for the response. It will never be displayed to the recipient.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© 2026 Work Crush. All rights reserved.</div>
+  <div>Private by design. Always respectful.</div>
+</footer>
+
+<script>
+const question = document.getElementById('question');
+const customArea = document.getElementById('customArea');
+const customQuestion = document.getElementById('customQuestion');
+const answers = document.getElementById('answers');
+const message = document.getElementById('message');
+
+question.addEventListener('change', () => {
+  customArea.hidden = question.value !== 'custom';
+  customQuestion.required = question.value === 'custom';
+});
+
+answers.addEventListener('click', event => {
+  if (event.target.classList.contains('remove')) {
+    if (answers.children.length > 2) {
+      event.target.parentElement.remove();
+    }
+  }
+});
+
+document.getElementById('addAnswer').addEventListener('click', () => {
+  if (answers.children.length >= 6) return;
+  const row = document.createElement('div');
+  row.className = 'answer';
+  const input = document.createElement('input');
+  input.placeholder = 'Enter an answer';
+  input.maxLength = 100;
+  const remove = document.createElement('button');
+  remove.type = 'button';
+  remove.className = 'remove';
+  remove.textContent = '×';
+  row.append(input, remove);
+  answers.append(row);
+});
+
+document.getElementById('questionForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const options = [...answers.querySelectorAll('input')]
+    .map(input => input.value.trim());
+  const text = question.value === 'custom'
+    ? customQuestion.value.trim()
+    : question.value;
+
+  if (!text || options.length < 2 || options.some(x => !x)) {
+    message.style.display = 'block';
+    message.textContent = 'Please complete your question and at least two answer options.';
+    return;
+  }
+
+  message.style.display = 'block';
+  message.textContent =
+    'Your question preview is ready: "' + text +
+    '". This is a front-end demonstration. Email delivery and secure response collection will be activated when the backend is connected.';
+});
+</script>
+</body>
+</html>
+
